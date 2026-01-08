@@ -1,2 +1,1 @@
-# latihan-git
 Tes perubahan baru
