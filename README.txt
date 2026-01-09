@@ -2,3 +2,6 @@ Tes perubahan baru
 TES PERUBAHAN BARU
 TES PERUBAHAN BARU 
 TES PERUBAHAN BARU
+COBA KONFLIK BRANCH
+  ^konflik 1
+  ^konflik 2
