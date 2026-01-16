@@ -4,4 +4,5 @@ git branch nama-branch (untuk membuat branch baru)
 git log (untuk melihat riwayat commit)
 git log --all --decorate --oneline --graph (untuk melihat riwayat commit dalam bentuk grafis)
 alias graph="git log --all --decorate --oneline --graph" (untuk membuat alias graph) disini saya buat perintah nya dengan nama graph jadi tinnggal ketik graph saja
-git checkout nama-branch (untuk pindah ke branch yang diinginkan)
+git checkout nama-branch (untuk pindah ke branch yang diinginkan) dan head akan berpindah ke branch yang diinginkan (ada 3 branch yang saya buat yaitu main, part-1, part-2)
+git branch part-3 (untuk membuat branch baru dengan nama part-3)
