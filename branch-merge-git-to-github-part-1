@@ -14,3 +14,24 @@ masuk dan buat file baru kasih nama part-2 dan save
 git add .
 git commit -m "menambahkan file part 2"
 tutorial selesai, lajut cari file part-2 di github
+
+merge branch part-2 ke main
+git checkout main (pindah ke branch main) ini penting sebelum merge
+git merge part-2 (merge branch part-2 ke main)
+sama cara nya untuk merge branch part-3 ke main
+git branch -d (nama-branch) (untuk menghapus branch yang sudah di merge) contoh : git branch -d part-2
+
+konflik merge
+skenario yang bikin konflik:
+                            file branch-merge-git-to-github-part-1 SUDAH ADA di branch main 
+                            file yang sama JUGA ADA fi branch part-2 (tapi isinya berbeda)
+                            waktu merge branch part-2 ke main, git bingun;"file yang sama tapi isinya beda pakai yang mana?"
+                            terjadilah konflik paham ?
+Konflik biasanya terjadi ketika file yang sama diubah di dua branch yang berbeda.
+contoh : dimain anda ubah file 1
+         dan di part-2 file 1 juga diubah
+pas MERGE : BENTROK
+
+soslusinya sekarang:
+Resolve konflik dengan pilih salah satu atau gabungkan keduanya atau, lalu commit
+catatan: PASTIKAN SEBELUM MERGE ANDA CHECKOUT ATAU SWITCH DULU KE BRANCH MAIN ATAU BRANCH YANG INGIN ANDA JADIKAN ENDPOINT
