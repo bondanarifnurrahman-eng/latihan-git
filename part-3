@@ -1,0 +1,22 @@
+# Branch Merge Git to GitHub
+karna sudah semua di jelaskan di part-1 dan part-2
+, di part-3 ini saya hanya menambahkan pembuatan branch baru dengan nama part-3 saja
+jadi silahkan ikuti perintah di bawah ini
+git branch part-3 (untuk membuat branch baru dengan nama part-3)
+masuk dan buat file baru kasih nama part-3 dan save
+git add .
+git commit -m "menambahkan file part 3"
+git branch part-3 
+git checkout part-3 (ketik git branch dan lihat head sudah pindah ke part-3)
+ketik graph dan lihat ada visualisasi grafis dari commit yang sudah di buat di branch part-3 (yang * artinya commit dan garis \/|  itu cabangnya disini kita lihat cabang nya dari main ke part-2 dan part-3 dengan posisi head menunjuk ke part-3)
+contoh visualisasi grafis nya seperti ini
+* hash (HEAD -> part-3) pesan commit part-3
+| * hash (part-2) pesan commit part-2
+|/  
+* hash (main) pesan commit part-1
+
+catatan: jangan lupa save file nya sebelum di add dan di commit
+jangan lupa juga setelah membuat branch baru di checkout ke branch yang baru dibuat tersebut agar head nya berpindah ke branch yang baru dibuat tadi
+bisa langsung kasih perintah git switch -c nama-branch-baru
+sehingga langsung membuat branch baru dan langsung pindah ke branch yang baru dibuat tersebut
+selamat mencoba dan semoga bermanfaat :)
