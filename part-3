@@ -20,4 +20,52 @@ jangan lupa juga setelah membuat branch baru di checkout ke branch yang baru dib
 bisa langsung kasih perintah git switch -c nama-branch-baru
 sehingga langsung membuat branch baru dan langsung pindah ke branch yang baru dibuat tersebut
 selamat mencoba dan semoga bermanfaat :)
-selamat mencoba dan semoga bermanfaat :)
+
+# Urutan: Checkout dulu, baru buat file
+
+**Checkout dulu**, kemudian buat file. Ini adalah urutan yang benar.
+
+**Alasan:**
+
+1. **Checkout** untuk memastikan Anda berada di branch yang tepat
+2. **Buat file** sambil berada di branch aktif tersebut
+3. Dengan cara ini, file langsung termasuk dalam branch yang Anda tuju
+
+**Alur yang benar:**
+
+```bash
+# 1. Checkout ke branch yang dituju
+git checkout fitur-baru
+
+# 2. Buat file baru
+echo "konten" > file.txt
+
+# 3. Add dan commit
+git add file.txt
+git commit -m "Tambah file baru"
+```
+
+**Apa yang terjadi kalau terbalik?**
+
+```bash
+# SALAH - buat file dulu di branch salah
+echo "konten" > file.txt
+
+# Terus checkout ke branch lain
+git checkout fitur-baru
+
+# File yang dibuat tidak akan ada di fitur-baru!
+# Karena file belum di-commit, dia hanya "untracked" di branch lama
+```
+
+**Jika file sudah tidak sengaja dibuat di branch salah:**
+
+```bash
+# Pindahkan file ke branch yang benar
+git checkout fitur-baru        # Checkout ke branch tujuan
+git checkout fitur-lama -- file.txt  # Ambil file dari branch lama
+git add file.txt
+git commit -m "Pindah file"
+```
+
+**Kesimpulan:** Selalu checkout branch dulu sebelum membuat file baru agar file langsung ada di branch yang tepat.
