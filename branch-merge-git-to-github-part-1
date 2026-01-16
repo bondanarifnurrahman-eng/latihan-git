@@ -7,6 +7,11 @@ M = modified (file yang sudah di add dan commit di git tapi belum ada digithub)
 git commit -am "catatan/pesan file" (kombinasi untuk perintah add dan commit)
 git status (untuk mengechek file sudah dicommit atau belum)head = pointer yang mengarah ke branch yang aktif
 head = pointer yang mengarah ke branch yang aktif/atau yang baru dibuat
-
-
+git branch nama-branch (untuk membuat branch baru) disini saya buat branch dengan nama part-2 dan part-3
+git checkout nama-branch (untuk pindah ke branch yang diinginkan) dan head akan berpindah ke branch yang diinginkan (ada 3 branch yang saya buat yaitu main, part-1, part-2)
+git branch part-2 (untuk membuat branch baru dengan nama part-2)
+masuk dan buat file baru kasih nama part-2 dan save
+git add .
+git commit -m "menambahkan file part 2"
+tutorial selesai, lajut cari file part-2 di github
 
