@@ -8,3 +8,4 @@ git commit -am "catatan/pesan file" (kombinasi untuk perintah add dan commit)
 git status (untuk mengechek file sudah dicommit atau belum)head = pointer yang mengarah ke branch yang aktif
 head = pointer yang mengarah ke branch yang aktif/atau yang baru dibuat
 
+
