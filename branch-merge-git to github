@@ -1,0 +1,10 @@
+# Branch Merge Git to GitHub
+Membuat file + save
+Masuk ke git + git add . (untuk masukin semua file ke git) atau git add nama file (untuk file yang lebih spesifik)
+U = untrack (file yang belum di add)
+git commit -m "catatan/pesan file"
+M = modified (file yang sudah di add dan commit di git tapi belum ada digithub)
+git commit -am "catatan/pesan file" (kombinasi untuk perintah add dan commit)
+git status (untuk mengechek file sudah dicommit atau belum)head = pointer yang mengarah ke branch yang aktif
+head = pointer yang mengarah ke branch yang aktif/atau yang baru dibuat
+
