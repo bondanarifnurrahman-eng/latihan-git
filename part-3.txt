@@ -32,8 +32,6 @@ selamat mencoba dan semoga bermanfaat :)
 3. Dengan cara ini, file langsung termasuk dalam branch yang Anda tuju
 
 **Alur yang benar:**
-
-```bash
 # 1. Checkout ke branch yang dituju
 git checkout fitur-baru
 
@@ -43,11 +41,9 @@ echo "konten" > file.txt
 # 3. Add dan commit
 git add file.txt
 git commit -m "Tambah file baru"
-```
 
 **Apa yang terjadi kalau terbalik?**
 
-```bash
 # SALAH - buat file dulu di branch salah
 echo "konten" > file.txt
 
@@ -56,16 +52,25 @@ git checkout fitur-baru
 
 # File yang dibuat tidak akan ada di fitur-baru!
 # Karena file belum di-commit, dia hanya "untracked" di branch lama
-```
 
 **Jika file sudah tidak sengaja dibuat di branch salah:**
 
-```bash
 # Pindahkan file ke branch yang benar
 git checkout fitur-baru        # Checkout ke branch tujuan
 git checkout fitur-lama -- file.txt  # Ambil file dari branch lama
 git add file.txt
 git commit -m "Pindah file"
-```
 
 **Kesimpulan:** Selalu checkout branch dulu sebelum membuat file baru agar file langsung ada di branch yang tepat.
+
+Dan kalau kita mau checkout diluar branch 
+git log (untuk melihat riwayat commit)
+pilih hash commit yang diinginkan (7 karakter awal saja sudah cukup contoh : abcd123)
+git checkout abcd123 (untuk checkout diluar branch)
+catatan: ketika checkout diluar branch, maka head akan berada di posisi detached HEAD
+artinya head tidak menunjuk ke branch manapun
+jadi kalau kita buat commit baru di posisi detached HEAD, commit tersebut tidak akan masuk ke branch manapun
+dan kalau kita ketik graph, maka HEAD akan menunjuk ke hash yang kita checkout tadi
+dan misalnya jika saya ingin menambahkan branch baru dari posisi detached HEAD ini
+ketik git branch (nama-branch-baru)
+dan checkout ke branch baru tersebut 
