@@ -1,0 +1,53 @@
+Ada dua cara 2 untuk menghubungkan Git lokal dengan GitHub, yaitu dengan HTTPS dan SSH.
+1. **Menggunakan HTTPS:**
+
+   - Pertama, pastikan Git sudah terinstal di komputer Anda.
+   - Buka terminal atau command prompt.
+   - Konfigurasikan username dan email Git Anda (jika belum dilakukan):
+     ```bash
+     git config --global user.name "YourUsername"
+     git config --global user.email "<EMAIL>"
+     ```
+    - Inisialisasi repository Git di folder proyek Anda (jika belum dilakukan):
+      ```bash
+      git init
+      ```   
+    - Tambahkan remote repository GitHub:
+      ```bash
+      git remote add origin https://github.com/YourUsername/YourRepository.git (link repo github kamu)
+        ```
+    maka kamu sudah menghubungkan git lokal dengan github menggunakan https
+
+2. **Menggunakan SSH:** 
+lihat di Notion saja sudah saya rangkum di sana
+
+git config --list untuk melihat username dan email yang sudah di set di git
+
+Cara melihat remote repository yang sudah ditambahkan:
+```bash
+git remote -v
+```
+cara keluar dari file cd .. untuk keluar dari file di terminal
+cara menghapus remote repository yang sudah ditambahkan:
+```bash 
+git remote remove origin
+```
+Cara mengganti URL remote repository:
+```bash
+git remote set-url origin https://github.com/YourUsername/YourRepository.git (link repo github kamu)
+``` 
+mkdir nama_folder_baru untuk membuat folder baru di terminal
+
+Kasus pertama: jika saya menambahkan file dan commit baru di git
+dan saya buka github, menambahkan file yang sama digithub tapi tidak mencentang readme atau file dibiarkan kosong maka saya akan masuk quick setup
+nah, disitu belum ada remote digit maka ketik git remote add origin (link repo github kamu)
+ketik git remote -v untuk memastikan remote sudah ditambahkan
+lalu ketik git push -u origin main (main adalah nama branch utama di github)
+maka file di git lokal akan terupload ke github
+
+nah, kasus kedua: jika file digithub dan git lokal berbeda makan saat kita push akan terjadi konflik
+untuk mengatasinya, ketik git fecth untuk ngechek commit di github udah sampe mana
+ketik git pull untuk merge commit di github ke git lokal
+buka vs code untuk mengedit konflik (silahkan pilih mau pake perubahan yang mana)
+baru git add . lalu git commit -m "pesan commit"
+dan git push
